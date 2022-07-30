@@ -17,11 +17,13 @@ int main() {
 }
 
 void sort(int *arr, int arrLen) {
-    int sorted = 0, temp;
+    int sorted = 0,
+        step = 1,  // The last index till which we need to search decreases every step
+        temp;
 
     while (sorted != 1) {
         sorted = 1;
-        for (int i = 0; i < arrLen - 1; ++i) {
+        for (int i = 0; i < arrLen - step; ++i) {
             if (arr[i] > arr[i + 1]) {
                 sorted = 0;
                 temp = arr[i];
