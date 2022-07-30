@@ -18,7 +18,7 @@ int main() {
 
 void sort(int *arr, int arrLen) {
     int sorted = 0,
-        step = 1,  // The last index till which we need to search decreases every step
+        step = 1,  // The last index till which we need to iterate decreases every step
         temp;
 
     while (sorted != 1) {
